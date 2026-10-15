@@ -56,15 +56,12 @@ sudo systemctl disable --now libvirtd.socket libvirtd-ro.socket libvirtd-admin.s
 
 Create a bash script to toggle the `libvirtd` daemon and the `default` virtual network simultaneously.
 
-1. Create the file:
+1. Make sure you have the kvm-toggle script :
 ```bash
-nano kvm-toggle
+cat kvm-toggle
 ```
 
-2. Make sure you have the kvm-toggle script
-
-
-3. Make it executable and move it to your local binaries path:
+2. Make it executable and move it to your local binaries path:
 ```bash
 chmod +x kvm-toggle
 sudo mv kvm-toggle /usr/local/bin/
