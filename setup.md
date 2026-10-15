@@ -44,6 +44,14 @@ Stop the daemon for now:
 sudo systemctl stop libvirtd.service
 ```
 
+**Disable Socket Activation:**
+By default, systemd will automatically wake up the `libvirtd` daemon if a tool (like `virsh` or `virt-manager`) tries to connect to it. This will bypass your toggle script and leave your VMs without a started network. Disable these sockets to prevent this:
+
+```
+sudo systemctl disable --now libvirtd.socket libvirtd-ro.socket libvirtd-admin.socket
+
+```
+
 ## 3. The Toggle Script
 
 Create a bash script to toggle the `libvirtd` daemon and the `default` virtual network simultaneously.
