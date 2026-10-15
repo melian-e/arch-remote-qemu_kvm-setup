@@ -100,7 +100,7 @@ If you want to view the graphical console of your VMs from a Windows machine ove
 **Prerequisite:** Ensure SSH is enabled and running on your Arch host (`sudo systemctl enable --now sshd`).
 
 1. **Download Virt-Viewer for Windows:**
-   Go to the [virt-manager download page](https://virt-manager.org/download/) and download the Windows installer for `virt-viewer`. Install it on your Windows machine.
+   Go to the [virt-manager download page](https://virt-manager.org/download.html) and download the Windows installer for `virt-viewer`. Install it on your Windows machine.
 
 2. **Start the Hypervisor:**
    SSH into your Arch host from Windows (using PowerShell or PuTTY) and run `kvm-toggle`.
